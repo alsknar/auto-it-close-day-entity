@@ -11,13 +11,13 @@
 #include <ScreenCapture.au3>
 
 ; считывание данных с ini-файла
-$sessions = IniRead("Закінчення дня_юр.ini", "sessions", "sessions_off", "NotFound")	; признак уничтожения сесии
-$abonent = IniRead("Закінчення дня_юр.ini", "proccess", "abonent", "NotFound") 			; название процесса абонентской
-$admin = IniRead("Закінчення дня_юр.ini", "proccess", "admin", "NotFound")     			; название процесса администратора
-$exe1 = IniRead("Закінчення дня_юр.ini", "exe", "admin", "NotFound")           			; полный путь к exe-файлу абонентской
-$exe2 = IniRead("Закінчення дня_юр.ini", "exe", "abonent", "NotFound")         			; полный путь к exe-файлу администратора
-$base = IniRead("Закінчення дня_юр.ini", "base", "base", "NotFound")           			; полный путь к базе
-$pack = IniRead("Закінчення дня_юр.ini", "pack", "pack", "NotFound")          			; полный путь к папке с архивами
+$sessions 	= IniRead("Закінчення дня_юр.ini", "sessions", "sessions_off", "NotFound")	; признак уничтожения сесии
+$abonent 	= IniRead("Закінчення дня_юр.ini", "proccess", "abonent", "NotFound") 		; название процесса абонентской
+$admin 		= IniRead("Закінчення дня_юр.ini", "proccess", "admin", "NotFound")     	; название процесса администратора
+$exe1 		= IniRead("Закінчення дня_юр.ini", "exe", "admin", "NotFound")           	; полный путь к exe-файлу абонентской
+$exe2 		= IniRead("Закінчення дня_юр.ini", "exe", "abonent", "NotFound")         	; полный путь к exe-файлу администратора
+$base 		= IniRead("Закінчення дня_юр.ini", "base", "base", "NotFound")           	; полный путь к базе
+$pack 		= IniRead("Закінчення дня_юр.ini", "pack", "pack", "NotFound")          	; полный путь к папке с архивами
 																					    ; что-бы не светить логином паролем в ini - файле вводим их в код
 $user = "Лаврененко А.Л."                                                       		; пользователь
 $password = ""		  			                                                		; пароль (ввести пароль при компиляции)
