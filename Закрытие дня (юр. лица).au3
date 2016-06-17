@@ -22,7 +22,7 @@ $pack = 	IniRead("Закінчення дня_юр.ini", "pack", "pack", "NotFound")          	
 $user = "Лаврененко А.Л."                                                       		; пользователь
 $password = ""		  			                                                		; пароль (ввести пароль при компиляции)
 $date = @YEAR & "_" & @MON & "_" & @MDAY
-$delay = 120	; задержка ожидание активации окна
+$delay = 300	; задержка ожидание активации окна
 if $sessions = 1 Then
 ; уничтожение всех существующих процессов абонентской и админинстратора
 	RunWait(@SystemDir & "\taskkill.exe /F /IM " & $abonent, @SystemDir, @SW_HIDE)
@@ -40,9 +40,8 @@ send('{RIGHT}')
 send('{RIGHT}')
 send('{RIGHT}')
 send('{ENTER}')
-send('ААА_0001')
+send("ААА_0001",1)
 send('{ENTER}')
-sleep(30000)
 If WinWaitActive("Виконання формули обробки (ААА_0001)",'OK',$delay) = 0 Then
    ScreenShotExit($pack, $date)
 EndIf
@@ -63,7 +62,7 @@ send('{DOWN}')
 send('{DOWN}')
 send('{ENTER}')
 send('{ENTER}')
-If WinWaitActive('Юридичнi Особи','РЕЖИМ: Створення таблиці, якщо не існує',"",$delay) = 0 Then
+If WinWaitActive('Юридичнi Особи','РЕЖИМ: Створення таблиці, якщо не існує',$delay) = 0 Then
    ScreenShotExit($pack, $date)
 EndIf
 send('!x')
